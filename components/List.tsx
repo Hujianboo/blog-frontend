@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 export default function List({allPosts}) {
   return (
     <div className="article-list">

@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import classnames from 'classnames'
 export default function TopBar({}) {
   return (
