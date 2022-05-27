@@ -1,0 +1,83 @@
+.side-bar{
+  position: fixed;
+  width: 300px;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  .name{
+    display: flow-root;
+    margin: 50px 0 50px 0;
+    font-size: 16px;
+    font-family: 'times new roman',times,serif;
+  }
+  .avatar{
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    display: flow-root;
+    cursor: pointer;
+  }
+  .flip-container {
+    perspective: 1000;
+    margin: 100px 0 50px 0;
+    // display: ;
+  }
+  /* flip the pane when hovered */
+  @media (hover: hover){
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+      transform: rotateY(180deg);
+    }
+  }
+  .flip-container, .front, .back {
+    width: 120px;
+    height: 120px;
+  }
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+  }
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+  }
+  .nav{  
+    .tag{
+      height: 30px;
+      @media (hover: hover) {
+        &:hover{
+          cursor: pointer;
+          font-weight: 600;
+        }
+      } 
+    }
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  @media screen and(min-width: 750px) and (max-width: 999px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 749px) {
+    display: none;
+  }
+}

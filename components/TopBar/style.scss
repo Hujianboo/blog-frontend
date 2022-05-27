@@ -1,0 +1,85 @@
+.top-bar{
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  left: 0px;
+  top: 0px;
+  height: 50px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  .name{
+    font-family: 'times new roman',times,serif;
+  }
+  .avatar{
+    border-radius: 60px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: flow-root;
+    cursor: pointer;
+  }
+  .flip-container {
+    perspective: 1000;
+    // display: ;
+  }
+  /* flip the pane when hovered */
+    .flip-container.hover .flipper {
+      transform: rotateY(360deg);
+    }
+  .flip-container, .front, .back {
+    width: 40px;
+    height: 40px;
+  }
+  /* flip speed goes here */
+  .flipper {
+    transition: 1.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+  }
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+  }
+  .nav{
+    flex:1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    .tag{
+      height: 30px;
+      line-height: 30px;
+      @media (hover:hover) {
+        &:hover{
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
+  @media screen and (max-width: 749px) {
+    display: flex;
+  }
+}
