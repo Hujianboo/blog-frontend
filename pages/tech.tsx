@@ -20,7 +20,8 @@ Tech.getLayout = function getLayout(page: ReactElement) {
 export async function getStaticProps() {
   const allPosts = getAllPosts([
     'title',
-    'tag'
+    'tag',
+    'date'
   ]).filter((item) => item.tag === 'tech')
   
   return {

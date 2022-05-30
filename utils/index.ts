@@ -38,7 +38,9 @@ export function getAllPosts(fields = []):Array<{title:string,tag:string}> {
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
-  return posts
+    console.log(posts.sort((a,b) => a.date - b.date));
+    
+  return posts.sort((a,b) => b.date - a.date)
 }
 export async function markdownToHtml(markdown) {
   const result = await remark()

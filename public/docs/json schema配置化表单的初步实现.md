@@ -1,6 +1,6 @@
 ---
 title: 'json schema配置化表单的初步实现'
-date: '2020-03-16T05:35:07.322Z'
+date: '20220327'
 tag: 'tech'
 ---
 # json schema配置化表单的初步实现
