@@ -3,7 +3,9 @@ import Path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkParse from 'remark-parse'
 import prism from 'remark-prism';
+import { unified } from 'unified'
 const docsDirectory = Path.join(process.cwd(),'public/docs');
 
 export function getPostBySlug(slug, fields = []):any {
@@ -43,8 +45,8 @@ export function getAllPosts(fields = []):Array<{title:string,tag:string}> {
   return posts.sort((a,b) => b.date - a.date)
 }
 export async function markdownToHtml(markdown) {
-  const result = await remark()
-  // .use(remarkParse)
+  const result = await unified()
+  .use(remarkParse)
   .use(html,{sanitize: false})
   .use(prism).process(markdown)
   return result.toString()
