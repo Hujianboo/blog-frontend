@@ -17,6 +17,14 @@ body {
   margin-top: 60px;
   margin-left: 300px;
   display: flow-root;
+  .time-stamp{
+    font-size: 12px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin-right: 50px;
+  }
   article{
     margin: 50px;
   }

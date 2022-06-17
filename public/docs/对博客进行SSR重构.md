@@ -97,7 +97,8 @@ export default function MyApp({ Component, pageProps }) {
 }
 ```
 
-> [https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/](https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/) 该链接很好地阐明了这种问题以及解决方法，并对该系列称为Persistent Layout。
+> [https://adamwathan.me/2019/10/17
+> /persistent-layout-patterns-in-nextjs/](https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/) 该链接很好地阐明了这种问题以及解决方法，并对该系列称为Persistent Layout。
 > 
 
 ### 文章解析

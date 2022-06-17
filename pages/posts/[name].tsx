@@ -5,6 +5,7 @@ import Layout from "../../components/Layout"
 export default function Post({post}) {
   return (
     <div className="post-container">
+      <strong className="time-stamp">{`CREATED DAY:${post.date || ''}`}</strong>
       <article
         dangerouslySetInnerHTML={{ __html: post.content }}
       >
@@ -14,13 +15,14 @@ export default function Post({post}) {
 }
 export async function getStaticProps({params}) {
   const res = getPostBySlug(params.name,[
-    'content'
+    'content','date'
   ]) as any
   const content = await markdownToHtml(res.content|| '')
   return {
     props: {
       post: {
-        content
+        content,
+        date: res.date
       }
     },
   }

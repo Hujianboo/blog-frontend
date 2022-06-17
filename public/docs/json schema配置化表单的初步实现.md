@@ -282,8 +282,9 @@ const InputWrap = (props: wrapPropsType) => {
 };
 ```
 每个组件内部值的更改，都会利用最上层的传递下来的更改函数，更改当前state内部对应的属性值。最后的效果如下图所示: 
+<img src="../jsonSchema.jpeg">
 
-![展示图片前请确保先能访问Imgur](http://23.105.214.157:3000/public/uploads/WechatIMG25-1655008487945.jpeg)
+<!-- ![展示图片前请确保先能访问Imgur](http://23.105.214.157:3000/public/uploads/WechatIMG25-1655008487945.jpeg) -->
 
 结论：
 
