@@ -6,7 +6,7 @@ tag: "tech"
 
 # react 首屏渲染基本原理过程
 
-Created: February 2, 2023 3:04 PM
+Created: February 2, 2023 23:04 PM
 
 源码地址: [https://github.com/Hujianboo/react-replica](https://github.com/Hujianboo/react-replica)
 
