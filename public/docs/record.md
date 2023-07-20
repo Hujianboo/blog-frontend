@@ -14,12 +14,13 @@ tag: "about"
 
 ## CURRENT:
 
-###
+#### 熟练使用业务中的前端常见技术，比如 html,css，javascript 和 vue,react
 
-1. 熟练使用业务中的前端常见技术，比如 html,css，javascript 和 vue,react
-2. 较了解前端构建工具如 webpack5 vite
-3. 包括 pc 和 h5 上，常见的前端动效实现
-4. nodejs 相关技术一般使用
+#### 较了解前端构建工具如 webpack5 vite
+
+#### 包括 pc 和 h5 上，常见的前端动效实现
+
+#### nodejs 相关技术一般使用
 
 # EXPERIENCE
 
@@ -49,21 +50,21 @@ tag: "about"
 
 **Bilibili**
 
-1.独立完成 bilibili 日常众多运营需求的自研活动开发，包括 h5 和 pc。
+独立完成 bilibili 日常众多运营需求的自研活动开发，包括 h5 和 pc。
 
-2.独立完成 bilibili 部分大型活动的开发（bml 首页和 bilibili world 的 pc 官网)
+独立完成 bilibili 部分大型活动的开发（bml 首页和 bilibili world 的 pc 官网)
 
 https://bw.bilibili.com/2021/index.html#/Home
 
 https://bml.bilibili.com/bml
 
-3.负责英雄联盟 s11 一系列 pc 和 h5 活动中，抽奖组件和任务组件的开发，支持运营定制化的动效需求。
+负责英雄联盟 s11 一系列 pc 和 h5 活动中，抽奖组件和任务组件的开发，支持运营定制化的动效需求。
 
-4.负责维护大部门内部的技术月刊平台的迭代(现已停，只开了三期）。包括前端和后端(nestjs +typescript+ mysql)
+负责维护大部门内部的技术月刊平台的迭代(现已停，只开了三期）。包括前端和后端(nestjs +typescript+ mysql)
 
-5.开发运营需求所需要的活动组件 比如帧动画组件，投票组件以及维护已有的组件，如抽奖，导航等等。
+开发运营需求所需要的活动组件 比如帧动画组件，投票组件以及维护已有的组件，如抽奖，导航等等。
 
-6.维护运营后台管理平台和部分页面的重构，以及日常对运营们提供对常见的低代码组件的使用咨询。
+维护运营后台管理平台和部分页面的重构，以及日常对运营们提供对常见的低代码组件的使用咨询。
 
 # 联系方式
 
