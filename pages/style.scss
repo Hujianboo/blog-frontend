@@ -97,3 +97,8 @@ blockquote p {
 // code:not(.language-jsx){
 //   background-color: rgb(253, 246, 227);
 // }
+.work-relative {
+  p {
+    text-indent: 0;
+  }
+}
