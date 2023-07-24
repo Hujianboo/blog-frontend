@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #e0e0e0;
   z-index: -1;
   position: relative;
 }
@@ -70,6 +69,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 .article-list {
+  position: relative;
   margin: 50px;
   padding: 40px;
   border-radius: 20px;
@@ -77,7 +77,7 @@ a {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   &:hover {
     transform: translate(0, -10px);
@@ -90,8 +90,44 @@ a {
     display: flow-root;
     margin: 25px 0;
     &:hover {
-      cursor: pointer;
-      color: rgb(19, 135, 230);
+      animation: jump 0.2s forwards;
+    }
+  }
+
+  figcaption::before,
+  figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: "";
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+  }
+
+  figcaption::before {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+  }
+
+  figcaption::after {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+  }
+
+  &:hover {
+    figcaption::before,
+    figcaption::after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
     }
   }
 }
@@ -162,5 +198,17 @@ blockquote p {
   @media screen and (max-width: 749px) {
     padding: 0;
     left: 8px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
