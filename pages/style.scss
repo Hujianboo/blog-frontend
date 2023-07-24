@@ -93,7 +93,12 @@ a {
       animation: jump 0.2s forwards;
     }
   }
-
+  figcaption {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
   figcaption::before,
   figcaption::after {
     position: absolute;
