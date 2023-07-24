@@ -6,6 +6,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #e0e0e0;
+  z-index: -1;
+  position: relative;
 }
 a {
   color: black;
@@ -18,7 +21,9 @@ a {
 .app-container {
   margin-top: 60px;
   margin-left: 300px;
-  display: flow-root;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
   .time-stamp {
     font-size: 12px;
     display: flex;
@@ -50,15 +55,29 @@ a {
     margin-left: 0px;
   }
 }
+.post-container {
+  margin: 40px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+.main-container {
+  flex: 1;
+}
 * {
   -webkit-tap-highlight-color: transparent;
 }
 .article-list {
   margin: 50px;
+  padding: 40px;
+  border-radius: 20px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   &-tab {
     font-style: italic;
     font-size: 20px;
@@ -100,5 +119,43 @@ blockquote p {
 .work-relative {
   p {
     text-indent: 0;
+  }
+}
+.personal-about {
+  position: relative;
+  margin-bottom: 80px;
+  padding: 24px 0;
+  background-color: #fff;
+  // border: 10px solid;
+  background-image: radial-gradient(
+    transparent 0px,
+    transparent 4px,
+    #fff 4px,
+    #fff
+  );
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    z-index: -1;
+    background-image: radial-gradient(
+      transparent 0px,
+      transparent 4px,
+      #fff 4px,
+      #fff
+    );
+    background-size: 16px 16px;
+    background-position: -8px -8px;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+  @media screen and (min-width: 750px) {
+    left: 40px;
+  }
+  @media screen and (max-width: 749px) {
+    padding: 0;
+    left: 8px;
   }
 }
