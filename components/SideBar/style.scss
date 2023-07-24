@@ -1,4 +1,4 @@
-.side-bar{
+.side-bar {
   position: fixed;
   width: 300px;
   left: 0px;
@@ -9,13 +9,13 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  .name{
+  .name {
     display: flow-root;
     margin: 50px 0 50px 0;
     font-size: 16px;
-    font-family: 'times new roman',times,serif;
+    font-family: "times new roman", times, serif;
   }
-  .avatar{
+  .avatar {
     border-radius: 60px;
     width: 120px;
     height: 120px;
@@ -29,12 +29,15 @@
     // display: ;
   }
   /* flip the pane when hovered */
-  @media (hover: hover){
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
+  @media (hover: hover) {
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
       transform: rotateY(180deg);
     }
   }
-  .flip-container, .front, .back {
+  .flip-container,
+  .front,
+  .back {
     width: 120px;
     height: 120px;
   }
@@ -45,7 +48,8 @@
     position: relative;
   }
   /* hide back of pane during swap */
-  .front, .back {
+  .front,
+  .back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -59,18 +63,22 @@
   .back {
     transform: rotateY(180deg);
   }
-  .nav{  
-    .tag{
-      height: 30px;
+  .nav {
+    .tag {
+      height: 50px;
+
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           cursor: pointer;
           font-weight: 600;
         }
-      } 
+      }
+      &:hover {
+        animation: jump 0.3s forwards;
+      }
     }
   }
-  a{
+  a {
     text-decoration: none;
     color: #000;
   }
@@ -79,5 +87,17 @@
   }
   @media screen and (max-width: 749px) {
     display: none;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
