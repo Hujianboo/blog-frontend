@@ -17,6 +17,7 @@ tag: "about"
 ### 现在
 
 熟练使用业务中的前端常见技术，比如 html css javascript vue react 等
+
 较了解前端构建工具如 webpack5 vite
 
 包括 pc 和 h5 上，常见的前端动效实现
