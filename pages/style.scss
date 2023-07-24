@@ -80,7 +80,8 @@ a {
   // background-color: #f2f2f2;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   &:hover {
-    transform: translate(0, -10px);
+    // transform: translate(0, -10px);
+    animation: jump 0.5s forwards;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   }
   &-tab {
@@ -211,7 +212,7 @@ blockquote p {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);

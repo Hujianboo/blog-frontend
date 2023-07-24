@@ -1,4 +1,4 @@
-.top-bar{
+.top-bar {
   position: fixed;
   width: 100%;
   box-sizing: border-box;
@@ -11,10 +11,11 @@
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  .name{
-    font-family: 'times new roman',times,serif;
+  z-index: 3;
+  .name {
+    font-family: "times new roman", times, serif;
   }
-  .avatar{
+  .avatar {
     border-radius: 60px;
     width: 40px;
     height: 40px;
@@ -27,10 +28,12 @@
     // display: ;
   }
   /* flip the pane when hovered */
-    .flip-container.hover .flipper {
-      transform: rotateY(360deg);
-    }
-  .flip-container, .front, .back {
+  .flip-container.hover .flipper {
+    transform: rotateY(360deg);
+  }
+  .flip-container,
+  .front,
+  .back {
     width: 40px;
     height: 40px;
   }
@@ -41,7 +44,8 @@
     position: relative;
   }
   /* hide back of pane during swap */
-  .front, .back {
+  .front,
+  .back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -55,24 +59,24 @@
   .back {
     transform: rotateY(180deg);
   }
-  .nav{
-    flex:1;
+  .nav {
+    flex: 1;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
-    .tag{
+    .tag {
       height: 30px;
       line-height: 30px;
-      @media (hover:hover) {
-        &:hover{
+      @media (hover: hover) {
+        &:hover {
           cursor: pointer;
           font-weight: 600;
         }
       }
     }
   }
-  a{
+  a {
     text-decoration: none;
     color: #000;
   }
