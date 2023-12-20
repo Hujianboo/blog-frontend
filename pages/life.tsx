@@ -7,7 +7,7 @@ import List from "../components/List";
 import { appendFile } from "fs";
 // import './style.scss'
 export default function Life({ allPosts }) {
-  return <List allPosts={allPosts} disabled={true}></List>;
+  return <List allPosts={allPosts}></List>;
 }
 Life.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
