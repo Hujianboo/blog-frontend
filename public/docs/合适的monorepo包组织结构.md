@@ -60,7 +60,7 @@ tag: "tech"
 
 解决方法：使用 node_modules 下的包，而不是通过相对路径的方式去引用同层级的包。
 
-**问题三：**每个包都有自己的输出目录，包 build 的时候依赖别的包的输出。如何解决？
+**问题三：** 每个包都有自己的输出目录，包 build 的时候依赖别的包的输出。如何解决？
 
 A: 1. Nx 做 build 管理。2. 自己写一个小脚本解决 build 顺序。3. 打包 build 的时候把依赖的内部的包都 external 掉，但是 dependencies 或 peerDependencies 里仍然标出该包。
 
