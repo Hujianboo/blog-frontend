@@ -74,9 +74,9 @@ A: 1. Nx 做 build 管理。2. 自己写一个小脚本解决 build 顺序。3. 
 
 ### 周边推荐阅读
 
-1.  [https://github.com/stereobooster/package.json](https://github.com/stereobooster/package.json#types)
+1.  [package.json 常用字段](https://github.com/stereobooster/package.json#types)
 
-2.  [https://pnpm.io/package_json#publishconfig](https://pnpm.io/package_json#publishconfig)
-3.  [https://www.typescriptlang.org/tsconfig#rootDir](https://www.typescriptlang.org/tsconfig#rootDir)
-4.  现代 JavaScript 库开发：原理、技术与实战 [https://book.douban.com/subject/36162488/](https://book.douban.com/subject/36162488/)
-5.  node_modules 的困境 [https://zhuanlan.zhihu.com/p/137535779](https://zhuanlan.zhihu.com/p/137535779)
+2.  [publishconfig](https://pnpm.io/package_json#publishconfig)
+3.  [rootDir 相关](https://www.typescriptlang.org/tsconfig#rootDir)
+4.  [现代 JavaScript 库开发：原理、技术与实战](https://book.douban.com/subject/36162488/)
+5.  [node_modules 的困境](https://zhuanlan.zhihu.com/p/137535779)
