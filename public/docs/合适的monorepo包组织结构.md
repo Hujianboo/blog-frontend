@@ -16,7 +16,7 @@ tag: "tech"
 
 ## 现状：
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/254127d3-b33d-438f-9ba5-38ea6a5b7410.png)
+![image](../monorepo结构/现状.png)
 
 ### 问题
 
@@ -26,18 +26,18 @@ tag: "tech"
 
 ### 解决
 
-**问题一：**monorepo 下的包 package.json，入口的 main 和 module 通常还是 dist 目录，不方便调试
+**问题一：** monorepo 下的包 package.json，入口的 main 和 module 通常还是 dist 目录，不方便调试
 
 1.  使用 yarn 或者 npm，在 publish 的时候修改 package.json 字段值。
 2.  使用 pnpm 的话，直接使用 publishConfig 解决发布时候的问题，覆盖原来的一些字段。
 
 代码仓库
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/6ef584e9-16f8-4182-a852-004a984a730d.jpeg)
+![image](../monorepo结构/image1.jpeg)
 
 实际下载的 npm 包
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/2df397ef-9cc8-44ec-9384-57b616d5fa0d.jpeg)
+![image](../monorepo结构/image2.jpeg)
 
 优点:
 
@@ -46,15 +46,15 @@ tag: "tech"
 
 **问题二：**使用相对路径去引用同层级的包，导致打包结果层级多余
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/5f509429-a651-41a4-af9f-7cf2ffedcba3.png)
+![image](../monorepo结构/image3.png)
 
 多余的层级结果
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/c0204a6b-6354-466f-8ee6-3577753ed233.png)
+![image](../monorepo结构/image4.png)
 
 更正过后，正确的层级结果
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/c4670f6b-7e6f-495b-9074-d857aed11006.png)
+![image](../monorepo结构/image5.png)
 
 原因：因为相对路径引用到了当前 package 的外部，ts 编译的时候，导致当前最小目录（rootDir)变为了最外层,导致生成的类型路径不对。
 
@@ -64,13 +64,13 @@ tag: "tech"
 
 A: 1. Nx 做 build 管理。2. 自己写一个小脚本解决 build 顺序。3. 打包 build 的时候把依赖的内部的包都 external 掉，但是 dependencies 或 peerDependencies 里仍然标出该包。
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/a235b825-7d5e-4f9e-9073-b5b61f2aac9f)
+![image](../monorepo结构/image7.jpg)
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/1a6f6d58-65bd-4d2e-9946-e41bb98c891f.png)
+![image](../monorepo结构/image6.png)
 
 ## 目标（改进后）
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8K4nyRkJjvxpqLbj/img/805d91f1-c286-4549-b0e0-03c64c26fb53.png)
+![image](../monorepo结构/target.png)
 
 ### 周边推荐阅读
 
